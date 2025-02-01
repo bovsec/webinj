@@ -4,7 +4,6 @@
 
 <h3>CSRF Zafiyeti Nasıl Çalışır?</h3>
 CSRF, genelikle şu adımları içerir:
-```php
 1.Kurbanın oturumunun aktif olması: Kurban, bir web uygulamasında (örneğin bir bankacılık sitesinde) oturum açmış olmalıdır.
 
 2.Kötü niyetli bir isteğin hazırlanması: Saldırgan, kurban adına istek gönderen bir form veya bağlantı oluşturur.
@@ -18,9 +17,9 @@ CSRF, genelikle şu adımları içerir:
 GET tabanlı CSRF saldırıları, bir URL’nin kötüye kullanılması yoluyla gerçekleştirilir. Örneğin:
 
 Zararlı URL:
-```php
+
 https://bank.example.com/transfer?account=12345&amount=1000
-```
+
 Kurban, bu URL’ye tıkladığında, oturum çerezleri otomatik olarak eklenir ve transfer işlemi gerçekleşir.
 
 Saldırı Senaryosu:
@@ -30,7 +29,7 @@ Saldırgan, bir sosyal medya platformunda, “Hediye Çeki Kazanın!” başlık
 
 <h2>POST Tabanlı CSRF</h2>
 <p>POST tabanlı CSRF saldırıları, bir formun kurban adına gönderilmesiyle gerçekleştirilir.</p>
-```php
+```
 <html>
   <body>
     <form action="https://bank.example.com/transfer" method="POST">
