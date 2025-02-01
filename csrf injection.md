@@ -1,8 +1,8 @@
-<h1>CSRF (Cross-Site Request Forgery) Zafiyeti Nedir?</h1>
+#CSRF (Cross-Site Request Forgery) Zafiyeti Nedir?
 
-<p>CSRF (Cross-Site Request Forgery), bir saldırganın kurbanı, istemeden bir işlemi gerçekleştirmeye zorladığı bir web güvenlik açığıdır. Bu zafiyet, kullanıcının tarayıcısında oturum açtığı ve kimlik doğrulamasının geçerli olduğu durumlarda, kötü niyetli bir isteğin kurban adına yapılmasına olanak tanır. Örneğin, bir bankacılık uygulamasında, bir saldırgan kurbanın bilgisi dışında bir para transferi gerçekleştirebilir.</p>
+##CSRF (Cross-Site Request Forgery), bir saldırganın kurbanı, istemeden bir işlemi gerçekleştirmeye zorladığı bir web güvenlik açığıdır. Bu zafiyet, kullanıcının tarayıcısında oturum açtığı ve kimlik doğrulamasının geçerli olduğu durumlarda, kötü niyetli bir isteğin kurban adına yapılmasına olanak tanır. Örneğin, bir bankacılık uygulamasında, bir saldırgan kurbanın bilgisi dışında bir para transferi gerçekleştirebilir.
 
-<h3>CSRF Zafiyeti Nasıl Çalışır?</h3>
+####CSRF Zafiyeti Nasıl Çalışır?
 CSRF, genelikle şu adımları içerir:
 1.Kurbanın oturumunun aktif olması: Kurban, bir web uygulamasında (örneğin bir bankacılık sitesinde) oturum açmış olmalıdır.
 
@@ -12,14 +12,14 @@ CSRF, genelikle şu adımları içerir:
 
 4.Yetkilendirilmiş işlemin gerçekleştirilmesi: Hedef uygulama, isteğin kurbandan geldiğini düşünerek işlemi gerçekleştirir.
 ```
-<h2>CSRF Saldırı Türleri</h2>
-<h4>1. GET Tabanlı CSRF</h4>
+CSRF Saldırı Türleri
+##1. GET Tabanlı CSRF
 GET tabanlı CSRF saldırıları, bir URL’nin kötüye kullanılması yoluyla gerçekleştirilir. Örneğin:
 
 Zararlı URL:
-
+```php 
 https://bank.example.com/transfer?account=12345&amount=1000
-
+```
 Kurban, bu URL’ye tıkladığında, oturum çerezleri otomatik olarak eklenir ve transfer işlemi gerçekleşir.
 
 Saldırı Senaryosu:
